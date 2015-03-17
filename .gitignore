@@ -1,0 +1,18 @@
+*.pyc
+
+# vim swap files
+.*.swp
+
+# services' runtime files
+*.log
+*.pid
+
+.idea/
+.DS_Store
+
+*.egg-info
+
+draft/
+/.testrepository
+/.tox
+/doc/build
