@@ -12,6 +12,12 @@ Contents:
 
    specs/*
 
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/kilo/*
+
 ================
 Index and tables
 ================
