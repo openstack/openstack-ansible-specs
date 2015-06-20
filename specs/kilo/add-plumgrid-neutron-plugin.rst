@@ -1,5 +1,5 @@
 Add PLUMgrid plugin to neutron playbooks
-################################################################
+########################################
 :date: 2015-06-2 14:30
 :tags: neutron, plugins, networking
 
@@ -9,7 +9,7 @@ OpenStack Neutron Plugin through the os-ansible neutron playbooks.
 * https://blueprints.launchpad.net/openstack-ansible/+spec/add-plumgrid-neutron-plugin
 
 Problem Description
-====================
+===================
 
 PLUMgrid is a core neutron networking plugin that has been a part of OpenStack
 neutron since Grizzly. It offers a Network Virtualization Platform that uses
@@ -31,14 +31,14 @@ APIs supported by the PLUMgrid plugin:
  - Provider Networks
 
 Proposed Change
-====================
+===============
 
 This change is proposed to add the PLUMgrid plugin as a core plugin option
 alongside ml2, which will be the default. This configurability should already
 be achieved by the BP: modularize-neutron-plays.
 
-The rest of the installation for PLUMgrid that requires PLUMgrid Controller and
-Compute components, that enable management of the plugin, will be added
+The rest of the installation for PLUMgrid that requires PLUMgrid Controller
+and Compute components, that enable management of the plugin, will be added
 externally through Ansible Galaxy roles.
 
 The changes described below assume the previously mentioned BP modularization
@@ -47,10 +47,11 @@ changes in place.
 This feature is proposed for both kilo and juno branches, the juno change
 will be carried out first:
 
-1. For juno, parameters relevant to the PLUMgrid plugin, namely the plumgrid core
-   plugin and plugin config file, plumgrid.ini will be added to a new
-   dictionary item in 'neutron_plugins' in inventory/group_vars/neutron_all.yml
-   This will allow setting the 'neutron_plugin_type = plumgrid' if desired.
+1. For juno, parameters relevant to the PLUMgrid plugin, namely the plumgrid
+   core plugin and plugin config file, plumgrid.ini will be added to a new
+   dictionary item in 'neutron_plugins' in
+   inventory/group_vars/neutron_all.yml This will allow setting the
+   'neutron_plugin_type = plumgrid' if desired.
 
 2. For kilo, parameters relevant to the PLUMgrid plugin will be added to a
    new dictionary item in 'neutron_plugins' in
@@ -80,6 +81,10 @@ New templates will be added in the os_neutron role:
  - playbooks/roles/os_neutron/templates/plugins/plumgrid/plumlib.ini
  - playbooks/roles/os_neutron/files/rootwrap.d/plumlib.filters
 
+Upgrade impact
+--------------
+
+None
 
 Alternatives
 ------------
@@ -119,6 +124,12 @@ Developer Impact
 
 This change adds further installable options and as such does not
 effect the default flow of the playbooks.
+
+
+Dependencies
+------------
+
+None
 
 Implementation
 ==============

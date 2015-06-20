@@ -30,11 +30,11 @@ each file for differences and making informed decisions about what values to
 take to ensure we have a production grade deployment system.
 
 The approach to dealing with differences (eg changed defaults for a particular
-setting) will be to use the kilo value where possible, adding an option to make
-any changed setting tunable if it was not already. This gives the option to
-users who are upgrading from juno to be able to reset a value back to the juno
-default if desired, but also means that greenfield deployments of kilo use the
-(hopefully better) kilo value.
+setting) will be to use the kilo value where possible, adding an option to
+make any changed setting tunable if it was not already. This gives the option
+to users who are upgrading from juno to be able to reset a value back to the
+juno default if desired, but also means that greenfield deployments of kilo use
+the (hopefully better) kilo value.
 
 Examples of configs impacted (these will differ depending on the service being
 worked on)::
@@ -49,9 +49,9 @@ worked on)::
 Alternatives
 ------------
 
-We could, wherever needed, preserve juno settings rather than taking forward the
-kilo settings.  This is potentially easier on users in an upgrade scenario, but
-does mean that new users deploying kilo would get an already out of date
+We could, wherever needed, preserve juno settings rather than taking forward
+the kilo settings.  This is potentially easier on users in an upgrade scenario,
+but does mean that new users deploying kilo would get an already out of date
 deployment. It also means that we miss an opportunity to implement best
 practices deployments, instead sticking on old, less relevant, values.
 
@@ -67,8 +67,8 @@ Upgrade impact
 --------------
 
 This change will impact upgrades, but upgrades are out of scope for this spec
-which will be addressed separately.  Largely it addresses greenfield deployments
-of kilo.
+which will be addressed separately.  Largely it addresses greenfield
+deployments of kilo.
 
 
 Security impact
@@ -84,8 +84,9 @@ Performance impact
 ------------------
 
 Because the Kilo code base is not tested and released, the performance of the
-stack will not be in scope at this time. As future work develops to finalize the
-roles used in Kilo, work will be done on a per role basis to ensure performance.
+stack will not be in scope at this time. As future work develops to finalize
+the roles used in Kilo, work will be done on a per role basis to ensure
+performance.
 
 
 End user impact
@@ -140,8 +141,8 @@ systems.
 Documentation impact
 ====================
 
-This change will likely have documentation impact. Specifically when documenting
-changed values or deprecated config items.
+This change will likely have documentation impact. Specifically when
+documenting changed values or deprecated config items.
 
 
 References

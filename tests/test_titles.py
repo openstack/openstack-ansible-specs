@@ -24,9 +24,10 @@ class TestTitles(testtools.TestCase):
         }
         for node in section_tree:
             if node.tagname == 'title':
-                section['name'] = node.rawsource
+                section['name'] = node.rawsource.lower()
             elif node.tagname == 'section':
                 subsection = self._get_title(node)
+                subsection['name'] = subsection['name'].lower()
                 section['subtitles'].append(subsection['name'])
         return section
 
@@ -40,12 +41,12 @@ class TestTitles(testtools.TestCase):
 
     def _check_titles(self, fname, titles):
         expected_titles = [
-            'Problem description',
-            'Proposed change',
-            'Implementation',
-            'Testing',
-            'Documentation impact',
-            'References'
+            'problem description',
+            'proposed change',
+            'implementation',
+            'testing',
+            'documentation impact',
+            'references'
         ]
         self.assertEqual(
             sorted(expected_titles),
@@ -53,28 +54,30 @@ class TestTitles(testtools.TestCase):
             "Expected titles not found in document %s" % fname
         )
 
-        proposed = 'Proposed change'
-        self.assertIn('Alternatives', titles[proposed])
-        self.assertIn('Dependencies', titles[proposed])
-        self.assertIn('Deployer impact', titles[proposed])
-        self.assertIn('Developer impact', titles[proposed])
-        self.assertIn('End user impact', titles[proposed])
-        self.assertIn('Performance impact', titles[proposed])
-        self.assertIn('Playbook impact', titles[proposed])
-        self.assertIn('Security impact', titles[proposed])
-        self.assertIn('Upgrade impact', titles[proposed])
+	try:
+            proposed = 'proposed change'
+            self.assertIn('alternatives', titles[proposed])
+            self.assertIn('dependencies', titles[proposed])
+            self.assertIn('deployer impact', titles[proposed])
+            self.assertIn('developer impact', titles[proposed])
+            self.assertIn('end user impact', titles[proposed])
+            self.assertIn('performance impact', titles[proposed])
+            self.assertIn('playbook impact', titles[proposed])
+            self.assertIn('security impact', titles[proposed])
+            self.assertIn('upgrade impact', titles[proposed])
 
-        impl = 'Implementation'
-        self.assertIn('Assignee(s)', titles[impl])
-        self.assertIn('Work items', titles[impl])
-
+            impl = 'implementation'
+            self.assertIn('assignee(s)', titles[impl])
+            self.assertIn('work items', titles[impl])
+        except Exception as exp:
+            raise SystemExit('Failed on file %s - Error %s' % (fname, exp))
     def _check_lines_wrapping(self, tpl, raw):
         for i, line in enumerate(raw.split("\n")):
             if "http://" in line or "https://" in line:
                 continue
             self.assertTrue(
-                len(line) < 80,
-                msg="%s:%d: Line limited to a maximum of 79 characters." %
+                len(line) <= 120,
+                msg="%s:%d: Line limited to a maximum of 120 characters." %
                 (tpl, i+1)
             )
 
@@ -99,7 +102,6 @@ class TestTitles(testtools.TestCase):
                 data = f.read()
 
             spec = docutils.core.publish_doctree(data)
-            titles = self._get_titles(spec)
-            self._check_titles(filename, titles)
+            self._check_titles(filename, self._get_titles(spec))
             self._check_lines_wrapping(filename, data)
             self._check_no_cr(filename, data)

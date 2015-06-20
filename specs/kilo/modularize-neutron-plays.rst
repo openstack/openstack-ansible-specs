@@ -45,6 +45,11 @@ Playbook Impact
  - playbooks/roles/os_neutron/tasks/neutron_post_install.yml
  - playbooks/roles/os_neutron/defaults/main.yml
 
+Upgrade Impact
+--------------
+
+None
+
 Alternatives
 ------------
 
@@ -123,7 +128,7 @@ A bit of additional documentation describing how to insert new plugins/agents
 will be required. This will be deployer documentation.
 
 References
-====================
+==========
 
 N/A
 
