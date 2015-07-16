@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+* Added spec to enable systemd support within OSAD
 * Cleaned up specs directory
 * Multi-region swift
 * Add standalone swift testing
