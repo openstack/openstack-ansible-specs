@@ -1,0 +1,18 @@
+CHANGES
+=======
+
+* Cleaned up specs directory
+* Multi-region swift
+* Add standalone swift testing
+* Keystone Federation Deployment
+* Cleaned up all specs
+* Add PLUMgrid Neutron Plugin to neutron playbooks
+* Modularize configuration files
+* Propose new developer documentation
+* added spec build-facts-archive
+* Add spec for BP implement-ceilometer
+* Add modularize-neutron-plays specification
+* Add master-kilofication specification
+* Adds minimal kilo spec
+* Initial commit for OS-Ansible-Deployment specs
+* Added .gitreview

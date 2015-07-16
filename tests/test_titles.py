@@ -62,7 +62,10 @@ class TestTitles(testtools.TestCase):
             self.assertIn('developer impact', titles[proposed])
             self.assertIn('end user impact', titles[proposed])
             self.assertIn('performance impact', titles[proposed])
-            self.assertIn('playbook impact', titles[proposed])
+            try:
+                self.assertIn('playbook impact', titles[proposed])
+            except AssertionError:
+                self.assertIn('playbook/role impact', titles[proposed])
             self.assertIn('security impact', titles[proposed])
             self.assertIn('upgrade impact', titles[proposed])
 

@@ -42,4 +42,7 @@ confidence in the Jenkins result), please execute the following command::
   $ tox
 
 After running ``tox``, the documentation will be available for viewing in HTML
-format in the ``doc/build/`` directory.
+format in the ``doc/build/`` directory. Tox is also used to update the
+AUTHORS and ChangeLog files for the specs repository. For every submission
+these files should be updated using the ``tox`` command.
+
