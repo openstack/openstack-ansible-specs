@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+* Remove upstream repository dependency
 * Limit the distribution of .my.cnf
 * Added spec to enable systemd support within OSAD
 * Cleaned up specs directory
