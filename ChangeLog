@@ -1,8 +1,12 @@
 CHANGES
 =======
 
+* Limit the distribution of .my.cnf
 * Added spec to enable systemd support within OSAD
 * Cleaned up specs directory
+* Ceph block devices
+* New spec for compartementalize-rabbitmq
+* Keystone Service Provider with ADFS Identity Provider Deployment
 * Multi-region swift
 * Add standalone swift testing
 * Keystone Federation Deployment
