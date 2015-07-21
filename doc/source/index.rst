@@ -17,6 +17,7 @@ Contents:
    :maxdepth: 1
 
    specs/kilo/*
+   specs/liberty/*
 
 ================
 Index and tables
