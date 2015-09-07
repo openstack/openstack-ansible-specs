@@ -18,6 +18,7 @@ Contents:
 
    specs/kilo/*
    specs/liberty/*
+   specs/mitaka/*
 
 ================
 Index and tables
