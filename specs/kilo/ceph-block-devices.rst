@@ -4,7 +4,7 @@ Ceph Block Devices
 :tags: storage, ceph
 
 This spec is a proposal to add the ability to configure cinder, glance, and
-nova running in an os-ansible-deployment installation to use an existing Ceph
+nova running in an openstack-ansible installation to use an existing Ceph
 cluster for the creation of volumes, images, and instances using Ceph block
 devices.
 
@@ -146,7 +146,7 @@ Work items
 Testing
 =======
 
-No gate-related adjustments will be made to os-ansible-deployment to support
+No gate-related adjustments will be made to openstack-ansible to support
 this change as no default configurations are being changed here.  Additionally,
 that there are strict limitations on what can run in the all-in-one (AIO) gate
 instance.

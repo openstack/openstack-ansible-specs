@@ -102,7 +102,7 @@ Work items
 
 * add test to project_config
 
-* enable test in os-ansible-deployment
+* enable test in openstack-ansible
 
 
 Testing

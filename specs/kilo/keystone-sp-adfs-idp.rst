@@ -3,7 +3,7 @@ Keystone Service Provider with ADFS Identity Provider Deployment
 :date: 2015-06-22 10:00
 :tags: federation, scalability
 
-This spec is to propose adding support to os-ansible-deployment for Keystone
+This spec is to propose adding support to openstack-ansible for Keystone
 federation using an Active Directory Federation Service (ADFS) Identity
 Provider.
 

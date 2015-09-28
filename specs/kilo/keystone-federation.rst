@@ -4,7 +4,7 @@ Keystone Federation
 :tags: federation, scalability
 
 This spec is to propose adding support for Keystone federation to
-os-ansible-deployment.
+openstack-ansible.
 
 Launchpad blueprint: https://blueprints.launchpad.net/openstack-ansible/+spec/keystone-federation
 

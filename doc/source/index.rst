@@ -1,27 +1,44 @@
-.. OS-Ansible-Deployment documentation master file
+.. OpenStack-Ansible documentation master file
 
-============================================
-OS-Ansible-Deployment Project Specifications
-============================================
+OpenStack-Ansible Project Specifications
+========================================
 
-Contents:
+`Specification Template <specs/template.rst>`_
+
+Mitaka Specifications
+---------------------
 
 .. toctree::
    :glob:
    :maxdepth: 1
 
-   specs/*
+   specs/mitaka/*
+
+Liberty Specifications
+----------------------
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/liberty/*
+
+Kilo Specifications
+-------------------
 
 .. toctree::
    :glob:
    :maxdepth: 1
 
    specs/kilo/*
-   specs/liberty/*
-   specs/mitaka/*
 
-================
 Index and tables
 ================
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/*
 
 * :ref:`search`

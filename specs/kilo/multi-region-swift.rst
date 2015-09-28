@@ -88,11 +88,11 @@ Proposed change
    between swift storage hosts across multiple locations and "deployments".
 
 4. Document the use of the read_affinity, write_affinity and
-   write_affinity_node_count settings within os-ansible-deployment and provide
+   write_affinity_node_count settings within openstack-ansible and provide
    guidance around how to implement the specified Use Cases.
 
 5. Document the process of setting up a global swift cluster within
-   os-ansible-deployment.
+   openstack-ansible.
 
 6. Adjust settings to allow the use of keystone v3 API for swift, in the swift
    configuration files.
@@ -188,11 +188,11 @@ Work items
    between swift storage hosts across multiple locations and "deployments".
 
 4. Document the use of the read_affinity, write_affinity and
-   write_affinity_node_count settings within os-ansible-deployment and provide
+   write_affinity_node_count settings within openstack-ansible and provide
    guidance around how to implement the specified Use Cases.
 
 5. Document the process of setting up a global swift cluster within
-   os-ansible-deployment.
+   openstack-ansible.
 
 6. Adjust settings to allow the use of keystone v3 API.
 

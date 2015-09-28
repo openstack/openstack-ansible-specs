@@ -3,7 +3,7 @@ Master Kilofication
 :date: 2015-03-23 13:00
 :tags: kilo, update,
 
-Update the various os-ansible-deployment playbooks and roles in the master
+Update the various openstack-ansible playbooks and roles in the master
 branch with the changes necessary to implement a fully functional and updated
 kilo deployment.
 
@@ -77,7 +77,7 @@ Security impact
 These changes will initially be based on BETA code (k3 and rc1 tags of kilo)
 which may have consequences regarding security, but work will be done to test
 against production kilo when it is released (and prior to the 11.0.0 release
-of os-ansible-deployment being tagged)
+of openstack-ansible being tagged)
 
 
 Performance impact

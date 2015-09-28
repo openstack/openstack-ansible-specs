@@ -142,7 +142,7 @@ References
 
 If you look at the current scripts located in the scripts directory
 
-* https://github.com/stackforge/os-ansible-deployment/blob/master/scripts/scripts-library.sh#L217-L269
+* https://github.com/openstack/openstack-ansible/blob/master/scripts/scripts-library.sh#L226-L279
 
 a lot of this information is already gathered about the host that the script
 is run on. This proposal should use the information that is gathered as a

@@ -1,9 +1,9 @@
-os-ansible-deployment overview documentation
-############################################
+openstack-ansible overview documentation
+########################################
 :date: 2015-04-13 13:00
 :tags: documentation, docs, developer
 
-Currently, the os-ansible-deployment repository does not have any cohesive
+Currently, the openstack-ansible repository does not have any cohesive
 developer documentation. This proposal aims to begin such documentation,
 providing a overview and reference for new contributors.
 
@@ -35,7 +35,7 @@ Proposed change
 This proposal recommends making a new docs repo, which would contain Sphinx
 documentation on the following documentation:
 
-* Overview of doing deployments using os-ansible-deployment
+* Overview of doing deployments using openstack-ansible
 
 * Variable files, for knowing which variable files are used where in the process.
 
@@ -48,14 +48,14 @@ documentation on the following documentation:
   hosts, create containers, and install OpenStack.
 
 * Repository role/playbook. Since the repository is fairly unique to
-  os-ansible-deployment, this should be probably be a bit more detailed than
+  openstack-ansible, this should be probably be a bit more detailed than
   the rest of the of the documentation. The openstack_services.yml and
   openstack_other.yml files are of particular interest here.
 
 * Inventory management. This section should discuss the dynamic_inventory.py
   file and and the inventory_management.py files.
 
-* Extending os-ansible-deployment. This would cover using the conf.d and env.d
+* Extending openstack-ansible. This would cover using the conf.d and env.d
   directories, as well as user_extras.yml files. Changes to ansible.cfg
   necessary might be useful, too.
 
@@ -69,7 +69,7 @@ Some topics are explicitly out of scope for this changes. In particular:
 
 * Individual roles. The individual roles should not be documented as part of
   this. There are too many roles and too many changes to be able to keep up with
-  those changes at the os-ansible-deployment level.
+  those changes at the openstack-ansible level.
 
 * End user documentation. For this specification, the 'end user' is a deployer
   or user of the deployed OpenStack system. The installation guide, operations
