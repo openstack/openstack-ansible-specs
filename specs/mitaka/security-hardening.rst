@@ -46,6 +46,9 @@ Proposed change
 The proposed changes include:
 
 #. Create a new role in a new repo to hold the security tasks
+
+   * See `Work items`_ below for specifics about the role.
+
 #. Write documentation about the hardening standards applied
 
    * Is this standard already deployed by default in Ubuntu 14.04 or by OSAD
@@ -184,13 +187,21 @@ Primary assignee:
   Major Hayden (LP: rackerhacker, IRC: mhayden)
 
 Other contributors:
-  Cody Bunch (LP: <TBA>, IRC: <TBA>)
+  Cody Bunch (LP: cody-bunch, IRC: e-vad)
 
 Work items
 ----------
 
-The work items are in the *Proposed change* section above in a numbered list.
-Documentation should come first, followed by actual configuration changes.
+The security hardening role should be in a separate repository titled
+``openstack-ansible-security``.  Once the role has content and is well-tested
+against openstack-ansible, it could be added as an optional dependency within
+openstack-ansible.  Documentation for the new role could be added into the
+existing openstack-ansible documentation to make it easier for
+openstack-ansible users to reference it.
+
+The other work items are in the *Proposed change* section above in a numbered
+list. Each configuration change should come with documentation about the
+change.
 
 
 Testing
