@@ -33,6 +33,9 @@ extensions = ['sphinx.ext.autodoc',
               'oslosphinx'
              ]
 
+# The link to the browsable source code (for the left hand menu)
+oslosphinx_cgit_link = 'http://git.openstack.org/cgit/openstack/openstack-ansible-specs'
+
 todo_include_todos = True
 
 # Add any paths that contain templates here, relative to this directory.
