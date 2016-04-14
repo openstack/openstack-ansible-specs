@@ -5,6 +5,15 @@ OpenStack-Ansible Project Specifications
 
 `Specification Template <specs/template.rst>`_
 
+Newton Specifications
+---------------------
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/newton/*
+
 Mitaka Specifications
 ---------------------
 
