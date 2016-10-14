@@ -1,6 +1,6 @@
 Example Spec - Title of your spec
 #################################
-:date: 2015-02-02 22:00
+:date: 2016-10-13 22:00
 :tags: used, for, groupings, and, indexing
 
 Update the date of your spec with the date that it was proposed.

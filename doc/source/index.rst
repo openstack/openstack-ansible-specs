@@ -3,7 +3,14 @@
 OpenStack-Ansible Project Specifications
 ========================================
 
-`Specification Template <specs/template.rst>`_
+Spec Templates
+--------------
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/templates/*
 
 Newton Specifications
 ---------------------
