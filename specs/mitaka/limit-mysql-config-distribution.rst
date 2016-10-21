@@ -17,7 +17,7 @@ utility container.
 Proposed change
 ===============
 
-* Add a variable to the the galera_client role to limit the distribution of the ``.my.cnf``
+* Add a variable to the galera_client role to limit the distribution of the ``.my.cnf``
   file.
 
 
