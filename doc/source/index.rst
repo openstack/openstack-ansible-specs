@@ -12,6 +12,15 @@ Spec Templates
 
    specs/templates/*
 
+Ocata Specifications
+---------------------
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/ocata/*
+
 Newton Specifications
 ---------------------
 
