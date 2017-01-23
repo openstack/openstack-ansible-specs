@@ -22,7 +22,7 @@ ansible and the openstack_inventory.json file and its groups to correctly
 structure a ansible query to gather information.
 
 It is also challenging to create a tool outside of OSAD to do some automation
-around aggregation of of deployment information as you need to parse the
+around aggregation of deployment information as you need to parse the
 inventory file or know exactly which host or container you need to access to
 get information.
 
