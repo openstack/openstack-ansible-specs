@@ -32,7 +32,7 @@ extensions = ['sphinx.ext.autodoc',
              ]
 
 # The link to the browsable source code (for the left hand menu)
-oslosphinx_cgit_link = 'http://git.openstack.org/cgit/openstack/openstack-ansible-specs'
+oslosphinx_cgit_link = 'https://git.openstack.org/cgit/openstack/openstack-ansible-specs'
 
 todo_include_todos = True
 
