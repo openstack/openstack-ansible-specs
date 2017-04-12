@@ -3,8 +3,9 @@ Monitoring for an OpenStack-Ansible deployment
 :date: 2017-02-21 00:00
 :tags: monitoring, operations
 
-Include the URL of your launchpad blueprint:
-  * https://blueprints.launchpad.net/openstack-ansible/+spec/example
+Blueprint on Launchpad:
+
+  * https://blueprints.launchpad.net/openstack-ansible/+spec/monitorstack
 
 The goal of the efforts described in this spec is to provide an easy method for
 monitoring an OpenStack cloud. This would initially include basic service state
