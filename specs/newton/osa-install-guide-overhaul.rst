@@ -39,27 +39,34 @@ content so a deployer makes very few decisions and minimal configuration
 to deploy an OpenStack test environment and production environment.
 
 The proposed changes are:
+
 * Clearly define reference architecture and develop use case configuration
   examples in an appendix.
+
 * Removal of the configuration information from the current installation guide
   and including it in the OpenStack-Ansible role documentation.
+
 * Migrate operations content temporarily to openstack-ansible-ops repo
   until an operations guide can be produced.
+
 * Restructure the guide to include basic deployment configuration.
+
 * Appendices that include configuration file examples, neutron plugins,
   cinder options and additional resources relevant to an OpenStack-Ansible
   installation.
+
 * Include links to role based documentation from the Installation Guide.
 
 Alternatives
 ------------
 
 * Leaving the installation guide as is, and migrating only the configuration
-information to the developer docs.
+  information to the developer docs.
 
-* Consider revising the installation guide to meet criteria in `project-specific installation guide
-<http://specs.openstack.org/openstack/docs-specs/specs/newton/project-specific-installguides.html>`_
-and publish to docs.openstack.org
+* Consider revising the installation guide to meet criteria in
+  `project-specific installation guide
+  <http://specs.openstack.org/openstack/docs-specs/specs/newton/project-specific-installguides.html>`_
+  and publish to docs.openstack.org
 
 Playbook/Role impact
 --------------------
@@ -143,8 +150,8 @@ This is a documentation change, N/A.
 References
 ==========
 
-* Design Summit discussion:
-  `https://etherpad.openstack.org/p/openstack-ansible-newton-role-docs`_
+* `Design Summit discussion
+  <https://etherpad.openstack.org/p/openstack-ansible-newton-role-docs>`_
 
-* ToC planning:
-  `https://docs.google.com/document/d/1WdcA7jIp8w1C52pJu4JmympFe8cOvcxi1I2E19Y6XYE/edit?ts=5743fe3f#heading=h.jg8guj3uzhzw`_
+* `ToC planning
+  <https://docs.google.com/document/d/1WdcA7jIp8w1C52pJu4JmympFe8cOvcxi1I2E19Y6XYE/edit?ts=5743fe3f#heading=h.jg8guj3uzhzw>`_

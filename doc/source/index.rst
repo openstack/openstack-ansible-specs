@@ -66,13 +66,4 @@ Kilo Specifications
 
    specs/kilo/*
 
-Index and tables
-================
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
-
-   specs/*
-
 * :ref:`search`

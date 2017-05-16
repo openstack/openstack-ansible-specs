@@ -40,10 +40,13 @@ The proposed changes are:
 * Removal of duplicated content from the OpenStack manuals operations guide
   (so that this guide focuses primarily upon OpenStack-Ansible operations).
 * Structuring the guide in a 'runbook' format for the following reasons:
+
   #. Ensuring the guide includes lower-level how-to's for anyone starting to
      operate their own cloud.
+
   #. Ensuring the guide includes higher-level troubleshooting information for
      more experienced operator.
+
   #. It is structured to make it easy for operators to find the information
      they are looking for.
 

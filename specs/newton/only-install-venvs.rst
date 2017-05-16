@@ -73,8 +73,8 @@ N/A.
 Deployer impact
 ---------------
 
-The *_venv_enabled variables will no longer exist and will have no effect if
-set by a deployer.
+The ``*_venv_enabled`` variables will no longer exist and will have no effect
+if set by a deployer.
 
 
 Developer impact

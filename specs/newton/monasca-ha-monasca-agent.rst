@@ -46,6 +46,7 @@ Notable changes:
     * Storm Nimbus & Supervisor
     * Zookeeper
     * Grafana & Monasca-ui
+
       * Not clustered, but for HA to work correctly on Grafana, session
         sharing and configuration database connection must be set to the Openstack-Ansible
         Galera cluster
