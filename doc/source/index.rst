@@ -12,6 +12,15 @@ Spec Templates
 
    specs/templates/*
 
+Queens Specifications
+-------------------
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/queens/*
+
 Pike Specifications
 -------------------
 
