@@ -13,7 +13,7 @@ Spec Templates
    specs/templates/*
 
 Queens Specifications
--------------------
+---------------------
 
 .. toctree::
    :glob:
