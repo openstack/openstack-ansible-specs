@@ -1,0 +1,169 @@
+Restructure pip-install
+#######################
+:date: 2017-08-19 18:00
+:tags: bare-metal, pip-install, openstack-hosts
+
+We could refactor pip install and the openstack-hosts to avoid
+running the same kind of tasks multiple times.
+
+Problem description
+===================
+
+The pip install role being a meta dependency, runs once per playbook
+in which a role includes it.
+
+If a host is the target of two or more playbooks (for example,
+if multiple services run on a bare metal target), the host will run
+the pip install role twice. This is very inefficient.
+
+The pip install role includes tasks that are already present
+in the openstack_hosts role, like repo management.
+These tasks can be consolidated into one set of tasks for bare metal
+nodes.
+
+Simply not running the pip_install role will raise an issue for container
+nodes. Container nodes still need the pip_install role for repo
+management, because the openstack_hosts role only applies to bare metal,
+while the pip install role applies to all nodes.
+
+Repo management in pip_install/openstack_hosts was added as a stop-gap
+in newton to address the need to cover the UCA repo addition to hosts,
+new containers, and existing containers. It was never meant to be a long
+term strategy, but we never got around to doing an improvement either.
+
+The problem with this approach is that it slows deployments down
+due to the meta-inclusion of the pip_install role everywhere and the repo
+management tasks the role does. Without the repo management tasks, the pip install
+role is quite quick.
+
+Proposed change
+===============
+
+By making openstack_hosts apply to all hosts, whether they are
+bare metal or containers (so considering "hosts" like the ansible term),
+we could drastically simplify the openstack_host and pip_install tasks.
+
+We could put all the repo management there, avoiding the duplication
+between openstack_hosts and pip_install.
+
+On top of that, we could include the pip install role directly in
+the openstack_hosts role (or not), conditionally, if a host/group of
+hosts need it.
+That would ensure the pip install role only run once, if we remove it
+from all the roles' meta dependencies.
+
+A host (whether a container or not) would then be fully prepared for
+all our roles.
+
+On top of that, if we smartly implement the repo management, we
+can simplify the way to override for deployers, per group.
+
+Alternatives
+------------
+
+The following steps could be done to replace the first item on the proposed change:
+1. Move the preparation of the LXC cache from the lxc_hosts role into the lxc_container_create
+   role. There is a ton of duplication in variables. The original reason for the implementation
+   in the way it is now is that the lxc_container_create role could not be targeted at a host,
+   and at containers. Now with include_role/tasks_from we can move the cache prep into the
+   lxc_container_create role and have a special playbook which targets the hosts and uses
+   include_role/tasks_from to do the cache prep and implement the base COW container
+   (if applicable).
+2. By doing the above we can also make the cache prep process
+   (including repo config/key copying from the host into the container) happen every time
+   the role is run. This would mean that openstack_hosts implements the repo on the host,
+   and lxc_container_create *always* copies the host config into the containers.
+   This has the added benefit of also updating the other copied files relating to time zone
+   and whatever else the deployer has set to copy from host to container.
+3. By doing the above we can also optimise the cache prep to reduce duplication in tasks and
+   perhaps also do a lot more optimisation of the use of the COW container base.
+4. Finally, with this implemented, there will be no need to manage the UCA repo anywhere but in
+   openstack_hosts. The configs will always update correctly and
+   we'll have a far better container config maintenance story.
+Those steps could be followed by the removal of the repo management in the pip_install role,
+and of the removal of the pip_install role from meta dependencies.
+Using the group_vars/host_vars for repo management inside containers wouldn't apply, though.
+
+Playbook/Role impact
+--------------------
+
+We'd have to change the playbooks to prepare for the inclusion of
+this new behavior. openstack_hosts playbook wouldn't require a change,
+but lxc_container_create should add this new role on newly created
+containers.
+
+On top of that, all roles should have the pip_install role removed from
+their dependencies.
+
+Upgrade impact
+--------------
+
+No impact.
+
+Security impact
+---------------
+
+No impact.
+
+Performance impact
+------------------
+
+Reducing the amount of tasks fastens the deployment.
+
+End user impact
+---------------
+
+No impact.
+
+Deployer impact
+---------------
+
+Each deployer should check that the newly used variables are properly
+overriden for its use case.
+
+Developer impact
+----------------
+
+It would be simpler to understand how things are prepared, so it helps
+the developers by making the onboarding easier.
+
+Dependencies
+------------
+
+None
+
+Implementation
+==============
+
+Assignee(s)
+-----------
+
+Primary assignee:
+  evrardjp
+
+Work items
+----------
+
+- Modify the openstack_hosts role to be able to run on containers
+- Remove pip_install tasks that overlap with the openstack_hosts
+  roles
+- Change group vars to add additional defaults repos per group,
+  and to skip the run of pip_install on some hosts.
+
+Testing
+=======
+
+OpenStack-Ansible main repository should pass gate testing.
+
+
+Documentation impact
+====================
+
+Each of the roles (openstack_hosts, pip_install, and all the
+consuming roles) should be adapted to reflect the change, and
+explain the new behavior.
+
+References
+==========
+
+NA.
