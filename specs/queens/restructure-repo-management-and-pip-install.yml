@@ -119,7 +119,7 @@ Deployer impact
 ---------------
 
 Each deployer should check that the newly used variables are properly
-overriden for its use case.
+overridden for its use case.
 
 Developer impact
 ----------------
