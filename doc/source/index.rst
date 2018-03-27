@@ -12,6 +12,15 @@ Spec Templates
 
    specs/templates/*
 
+Rocky Specifications
+---------------------
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/rocky/*
+
 Queens Specifications
 ---------------------
 
