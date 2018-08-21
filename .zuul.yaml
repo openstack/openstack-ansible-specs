@@ -1,0 +1,4 @@
+- project:
+    templates:
+      - openstack-specs-jobs
+      - check-requirements
