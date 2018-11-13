@@ -12,7 +12,7 @@ project networks.
 Problem description
 ===================
 
-Neutron currently (in kilo) has the ability to to manage and route IPv6 data.
+Neutron currently (in kilo) has the ability to manage and route IPv6 data.
 OpenStack Ansible currently has a few holes in IPv6 support on Neutron tenant
 networks (not installing the radvd package in the neutron-agents container
 for instance).
