@@ -142,7 +142,7 @@ Pip will always check all locations before deciding which to use for the
 installation. This means that if there are multiple indexes used, it queries
 them all. This can be slow if any of those are not local to the environment.
 
-.. _Python wheels: http://pythonwheels.com
+.. _Python wheels: https://pythonwheels.com/
 .. _Python virtualenvs: https://virtualenv.pypa.io
 
 Proposed change

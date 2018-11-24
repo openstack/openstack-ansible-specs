@@ -153,7 +153,7 @@ to install PLUMgrid will be required. This will be deployer documentation.
 References
 ==========
 
-* http://www.plumgrid.com/
+* https://www.vmware.com/products/nsx.html
 
 * https://wiki.openstack.org/wiki/PLUMgrid-Neutron
 
