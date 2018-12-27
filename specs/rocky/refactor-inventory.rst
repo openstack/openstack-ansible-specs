@@ -163,7 +163,7 @@ The deployer will have a different user configuration to deal with
 (static files)
 
 Hopefully it shouldn't be too hard to understand for an existing
-openstack-ansible user, or a experienced ansible user.
+openstack-ansible user, or an experienced ansible user.
 
 Developer impact
 ----------------

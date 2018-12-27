@@ -173,4 +173,4 @@ downtime will also need to be documented.
 References
 ==========
 
-http://uwsgi-docs.readthedocs.io/en/latest/Fastrouter.html
+https://uwsgi-docs.readthedocs.io/en/latest/Fastrouter.html
