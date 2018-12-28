@@ -50,7 +50,7 @@ worked on)::
     /etc/<servicename>/policy.json
     /etc/<servicename>/<servicename>-<agentname>.ini
 
-.. _config_overrides: http://docs.openstack.org/developer/openstack-ansible/install-guide/configure-openstack.html
+.. _config_overrides: https://docs.openstack.org/project-deploy-guide/openstack-ansible/latest/configure.html
 
 Alternatives
 ------------
