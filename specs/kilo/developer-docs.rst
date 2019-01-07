@@ -53,7 +53,7 @@ documentation on the following documentation:
   openstack_other.yml files are of particular interest here.
 
 * Inventory management. This section should discuss the dynamic_inventory.py
-  file and and the inventory_management.py files.
+  file and the inventory_management.py files.
 
 * Extending openstack-ansible. This would cover using the conf.d and env.d
   directories, as well as user_extras.yml files. Changes to ansible.cfg
