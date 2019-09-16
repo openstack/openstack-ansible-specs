@@ -114,7 +114,7 @@ A new role will be developed from scratch in compliance with the standards set b
 community. It will be added under https://github.com/openstack/openstack-ansible-os_masakari
 
 Note: Masakari role will install below services:
-maskari-api
+masakari-api
 masakari-engine
 masakari-processmonitor
 masakari-hostmonitor
