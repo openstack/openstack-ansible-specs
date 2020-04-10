@@ -235,7 +235,7 @@ Proposed change
 .. _pypiserver: https://pypiserver.readthedocs.io
 
 Alternatives
-------------
+~~~~~~~~~~~~
 
 * The build process can remain as-is, continuing to confuse deployers and
   difficult to maintain.
@@ -245,7 +245,7 @@ Alternatives
   venvs for distribution.
 
 Playbook/Role impact
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Playbooks will be added to cater for the build process and the staging
 process. The roles will be adjusted to properly separate out the build
@@ -253,32 +253,32 @@ tasks and the distro packages to install for the build (versus those
 required when using pre-built wheels).
 
 Upgrade impact
---------------
+~~~~~~~~~~~~~~
 
 Care will be taken to ensure that upgrades happen as they do today.
 
 Security impact
----------------
+~~~~~~~~~~~~~~~
 
 The security posture should be improved by the reduction of packages installed
 onto hosts and containers when a full set of artifacts are built.
 
 Performance impact
-------------------
+~~~~~~~~~~~~~~~~~~
 
 The performance of the deployment should be improved due to the reduction in
 time taken to deploy with pre-built packages if a full set of artifacts are
 built.
 
 End user impact
----------------
+~~~~~~~~~~~~~~~
 
 There is no end-user impact for consumers of an OpenStack cloud, except
 perhaps that upgrades will be quicker to execute, thus resulting in reduced
 maintenance slot requirements.
 
 Deployer impact
----------------
+~~~~~~~~~~~~~~~
 
 * As deployments and upgrades will be quicker to execute, deployers will be
   able to execute them in shorter maintenance slots.
@@ -287,13 +287,13 @@ Deployer impact
   prepare the required artifacts to speed up deployments.
 
 Developer impact
-----------------
+~~~~~~~~~~~~~~~~
 
 As the build process will be integrated into the roles, it will be easier to
 understand how it works and what it does.
 
 Dependencies
-------------
+~~~~~~~~~~~~
 
 This spec will be implemented in partnership with
 https://blueprints.launchpad.net/openstack-ansible/+spec/deployment-stages
@@ -302,13 +302,13 @@ Implementation
 ==============
 
 Assignee(s)
------------
+~~~~~~~~~~~
 
 Primary assignee:
   jesse-pretorius (odyssey4me)
 
 Work items
-----------
+~~~~~~~~~~
 
 Each of the roles implemented in the default AIO will be worked through in
 sequence to re-arrange and optimise based on this workflow. The work items

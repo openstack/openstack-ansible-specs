@@ -22,8 +22,6 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import pbr.version
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -39,7 +37,6 @@ import pbr.version
 # ones.
 extensions = [
     'openstackdocstheme',
-    'sphinx.ext.autodoc',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -66,16 +63,6 @@ role_name = 'specs'
 target_name = 'openstack-ansible-' + role_name
 title = 'OpenStack-Ansible ' + role_name + ' Documentation'
 
-# The version info for the project you're documenting, acts as replacement for
-# |version| and |release|, also used in various other places throughout the
-# built documents.
-#
-# The short X.Y version.
-version_info = pbr.version.VersionInfo(target_name)
-# The full version, including alpha/beta/rc tags.
-release = version_info.version_string_with_vcs()
-# The short X.Y version.
-version = version_info.canonical_version_string()
 
 # openstackdocstheme options
 repository_name = 'openstack/' + target_name
@@ -160,16 +147,12 @@ html_theme = 'openstackdocs'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
 # html_extra_path = []
-
-# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
-# using the given strftime format.
-html_last_updated_fmt = '%Y-%m-%d %H:%M'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.

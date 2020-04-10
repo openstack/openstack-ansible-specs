@@ -270,6 +270,7 @@ So I propose the following path:
      group vars
 
    Drawbacks:
+
    * More static files to maintain by the deployer.
      If we change a host var, we could change the
      inventory and it was applied everywhere.

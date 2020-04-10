@@ -11,7 +11,7 @@ Log file analysis is an important part of maintaining and troubleshooting
 OpenStack clouds, but using traditional single server methodology to analyze
 the logs on clouds with tens, hundreds or thousands of servers can become
 problematic and unwieldy.  By leveraging the search, collation and analysis
-features of the ELK (Elasticsearch`[1]`_, Logstash`[2]`_ and Kibana`[3]`_) stack
+features of the ELK (Elasticsearch [1]_, Logstash [2]_ and Kibana [3]_) stack
 we can provide a cloud level view of all of the log files. The ELK stack also
 provides the ability to correlate log messages across various services, perform
 detailed log analysis and do trending based on metrics derived from log
@@ -61,7 +61,7 @@ Playbook/Role impact
 
 The changes required are located in stand alone playbooks.  Additional roles
 will need to be created for Logstash, Kibana and Filebeat, the
-`ansible-elasticsearch``[4]`_ maintained by elastic.co provides Elasticsearch.
+`ansible-elasticsearch`` [4]_ maintained by elastic.co provides Elasticsearch.
 Configuration can be stand-alone or integrated into the `user-variables.yml` and
 `user-secrets.yml` files.
 
@@ -181,20 +181,21 @@ Documentation impact
 
 Along with the general installation procedures and configuration the key points
 of documentation will be:
-  * Filebeats parsing rules
-  * Logstash parsing rules
-  * Kibana dashboard configuration
-  * The default Kibana dashboard
-  * Performance impact and tuning of the ELK stack
+
+* Filebeats parsing rules
+* Logstash parsing rules
+* Kibana dashboard configuration
+* The default Kibana dashboard
+* Performance impact and tuning of the ELK stack
 
 
 References
 ==========
 
-[1] https://elastic.co/products/elasticearch
+.. [1] https://elastic.co/products/elasticearch
 
-[2] https://elastic.co/products/logstash
+.. [2] https://elastic.co/products/logstash
 
-[3] https://elastic.co/products/kibana
+.. [3] https://elastic.co/products/kibana
 
-[4] https://github.com/elastic/ansible-elasticsearch
+.. [4] https://github.com/elastic/ansible-elasticsearch

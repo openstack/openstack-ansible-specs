@@ -95,6 +95,7 @@ the priorities change.
 
 For improving the reading experience, ensure that each page has
 a proper structure:
+
 - Only content should appear in the content part of the page
 - The chapters should only be in the upper-left section of
   the page ToC, and pointing to this guide chapters, not the whole
