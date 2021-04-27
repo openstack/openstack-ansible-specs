@@ -12,8 +12,17 @@ Spec Templates
 
    specs/templates/*
 
+Wallaby Specifications
+----------------------
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/wallaby/*
+
 Rocky Specifications
----------------------
+--------------------
 
 .. toctree::
    :glob:
