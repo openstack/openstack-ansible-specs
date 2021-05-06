@@ -12,6 +12,15 @@ Spec Templates
 
    specs/templates/*
 
+Xena Specifications
+-------------------
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/xena/*
+
 Wallaby Specifications
 ----------------------
 
