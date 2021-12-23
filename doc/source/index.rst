@@ -21,6 +21,15 @@ Antelope Specifications
 
    specs/antelope/*
 
+Zed Specifications
+------------------
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/zed/*
+
 Xena Specifications
 -------------------
 
