@@ -12,6 +12,15 @@ Spec Templates
 
    specs/templates/*
 
+Antelope Specifications
+-----------------------
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+
+   specs/antelope/*
+
 Xena Specifications
 -------------------
 
